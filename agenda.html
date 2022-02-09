@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/drz.jpeg" width="32px">
+  <title>Clinica Estetica Doctor Z</title>
+<link rel="stylesheet" href="./CSS/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <a href="#"  class="enlace"> 
+          <img src="./images/drz.jpeg" alt="Aqui va la Imagen del Logo" class="logo">
+      </a>
+      <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./servicios.html">Servicios</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="#">Agenda</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+     
+   
+  </header>
+    
+      
+      <main>
+        <section class="agenda">
+          <h2>Agenda Disponible</h2>
+        </section>
+        
+        <!-- Desde Aqui Agenda-->
+        <body class="body-agenda">
+          
+          <section class="agenda-cuerpo">
+
+            <form action="reservation.php" method="post">
+              <div class="elem-group">
+                <label for="name">Tu Nombre</label>
+                <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+              </div>
+              <div class="elem-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+              </div>
+              <div class="elem-group">
+                <label for="phone">Telefono</label>
+                <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+              </div>
+              <hr>
+              
+              <div class="elem-group inlined">
+                <label for="checkin-date">Fecha Reserva</label>
+                <input type="date" id="checkin-date" name="checkin" required>
+              </div>
+              <hr>
+              
+              <div class="elem-group">
+                <label for="room-selection">Servicio</label>
+                <select id="room-selection" name="room_preference" required>
+                  <option value="">Seleccione el Servicio</option>
+                  <option value="connecting">Dental</option>
+                  <option value="adjoining">Estetico Facial</option>
+                  <option value="adjacent">Evaluación</option>
+                </select>
+              </div>
+              
+              <button type="submit">Agendar</button>
+            </form>
+          </section>
+            
+          </main>  
+          
+          <footer class="footer">
+            <p>Clinica Odontologica Dr. Z</p>
+            <p>Providencia. Santiago</p>
+          </footer>
+          
+        </body>
+        
+        
+        </html>
